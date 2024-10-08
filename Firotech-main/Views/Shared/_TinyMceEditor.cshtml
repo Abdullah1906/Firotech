@@ -1,0 +1,26 @@
+﻿@model Firotechbd.ViewModels.TinyMceEditorViewModel
+@{
+    var asdf = Model.TextAreaId;
+
+    var sadfd = asdf;
+
+}
+<div class="form-group">
+    <label for="@Model.TextAreaId">@Model.Label</label>
+    <textarea id="@Model.TextAreaId" name="@Model.TextAreaId" class="form-control" placeholder="@Model.Placeholder"></textarea>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/5kv5fb5fsylzy9mb51mvz33smlelv7wbcps2nomxt69ky176/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+         
+        tinymce.init({
+            selector: '#@Model.TextAreaId',
+            plugins: 'link image table lists',
+            toolbar: 'undo redo | formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | link image media | forecolor backcolor emoticons | ' +
+                'fontsizeselect fontselect | insertfile table template hr | preview code fullscreen',
+            menubar: 'file edit view insert format tools table help',
+        });
+    </script>
+}

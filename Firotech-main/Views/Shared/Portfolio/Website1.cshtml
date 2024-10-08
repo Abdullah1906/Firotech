@@ -1,0 +1,134 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Add custom styles for icons */
+    .feature-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .gallery-card {
+        margin-bottom: 20px;
+        background-color: #f8f9fa; /* Light background color */
+        border: 1px solid #dee2e6; /* Border color */
+        border-radius: 0.25rem; /* Rounded corners */
+        padding: 15px; /* Padding inside card */
+    }
+
+    .gallery-title {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+@Html.Partial("_HomeFixedMenu")
+<!-- Blog Details Page Container -->
+<div class="container mt-5">
+    <!-- Blog Header -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Build Website for Your Company</h1>
+        <p class="text-muted">Published by FiroTech</p>
+        <!-- Request for Demo Button -->
+        <a href="#contact" class="btn btn-primary mt-3">Request for Demo</a>
+    </div>
+
+    <!-- Key Features Section -->
+    <!-- Key Features Section for Admin Management -->
+    <div class="row">
+        <div class="col-md-12 key-box">
+            <h2 class="mb-4">Key Features for Admin Management</h2>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-tachometer-alt feature-icon text-primary"></i><strong>Dashboard Overview:</strong> Gain insights into website performance, visitor statistics, and key metrics from a centralized dashboard.</li>
+                <li><i class="fas fa-pencil-alt feature-icon text-success"></i><strong>Content Management System (CMS):</strong> Easily create, edit, and manage website content, including pages, blogs, and media files.</li>
+                <li><i class="fas fa-images feature-icon text-info"></i><strong>Media Library:</strong> Upload and organize images, videos, and other media assets for use throughout the website.</li>
+                <li><i class="fas fa-users feature-icon text-warning"></i><strong>User Management:</strong> Manage user accounts, roles, and permissions to control access to different parts of the website.</li>
+                <li><i class="fas fa-comments feature-icon text-danger"></i><strong>Feedback & Comments Moderation:</strong> Review, approve, or delete user comments and feedback to maintain website integrity.</li>
+                <li><i class="fas fa-envelope feature-icon text-dark"></i><strong>Contact Form Management:</strong> Access and respond to messages received via the website's contact forms.</li>
+                <li><i class="fas fa-sliders-h feature-icon text-secondary"></i><strong>Customizable Homepage Slider:</strong> Manage homepage sliders to highlight key services, promotions, or announcements dynamically.</li>
+                <li><i class="fas fa-bell feature-icon text-muted"></i><strong>Notifications & Alerts:</strong> Receive notifications for user interactions, new comments, and system updates.</li>
+                <li><i class="fas fa-file-alt feature-icon text-primary"></i><strong>SEO Tools & Settings:</strong> Optimize website pages for search engines with built-in SEO tools, including meta tags and sitemap generation.</li>
+                <li><i class="fas fa-cogs feature-icon text-success"></i><strong>Site Settings & Configurations:</strong> Customize website settings, including theme, layout, branding, and language preferences.</li>
+                <li><i class="fas fa-folder-open feature-icon text-info"></i><strong>Menu & Navigation Management:</strong> Create and organize menus for easy navigation throughout the website.</li>
+                <li><i class="fas fa-database feature-icon text-warning"></i><strong>Database Management:</strong> Backup and maintain the website's database to ensure data integrity and security.</li>
+                <li><i class="fas fa-chart-bar feature-icon text-danger"></i><strong>Analytics & Reporting:</strong> Access detailed reports on website traffic, user behavior, and engagement metrics.</li>
+                <li><i class="fas fa-search feature-icon text-dark"></i><strong>Search Functionality:</strong> Enable and manage site-wide search to help users find content quickly.</li>
+                <li><i class="fas fa-bullhorn feature-icon text-secondary"></i><strong>Announcement & News Management:</strong> Post and manage news, announcements, and company updates on the website.</li>
+                <li><i class="fas fa-flag feature-icon text-muted"></i><strong>Multilingual Support:</strong> Add and manage multiple languages to cater to a diverse audience.</li>
+                <li><i class="fas fa-link feature-icon text-primary"></i><strong>Link & Redirect Management:</strong> Manage internal and external links, and set up redirects to ensure a seamless user experience.</li>
+                <li><i class="fas fa-lock feature-icon text-success"></i><strong>Security & Privacy Settings:</strong> Configure website security features, including SSL certificates, privacy policies, and GDPR compliance.</li>
+                <li><i class="fas fa-upload feature-icon text-info"></i><strong>File Upload & Download Management:</strong> Allow users to upload files securely and manage downloadable resources.</li>
+                <li><i class="fas fa-ad feature-icon text-warning"></i><strong>Advertisement Management:</strong> Manage website ads, banners, and promotional content easily.</li>
+                <li><i class="fas fa-calendar-alt feature-icon text-danger"></i><strong>Event & Calendar Management:</strong> Create and manage company events, webinars, and calendars for public or internal viewing.</li>
+                <li><i class="fas fa-cube feature-icon text-dark"></i><strong>Widget Management:</strong> Add, configure, and manage website widgets to enhance functionality.</li>
+                <li><i class="fas fa-clipboard-check feature-icon text-secondary"></i><strong>Form Builder:</strong> Create custom forms for various purposes like surveys, feedback, and registrations.</li>
+                <li><i class="fas fa-users-cog feature-icon text-muted"></i><strong>Team Management:</strong> Showcase team members and manage team profiles, roles, and visibility on the website.</li>
+                <li><i class="fas fa-sitemap feature-icon text-primary"></i><strong>Site Map & Navigation Tree:</strong> Visualize and manage the structure of the website for better user experience and SEO.</li>
+                <li><i class="fas fa-external-link-alt feature-icon text-success"></i><strong>External Services Integration:</strong> Integrate with third-party services like social media, Google Analytics, and more.</li>
+                <li><i class="fas fa-user-shield feature-icon text-info"></i><strong>Access Control & User Roles:</strong> Assign roles and permissions to manage who can access and edit specific content.</li>
+                <li><i class="fas fa-question-circle feature-icon text-warning"></i><strong>Help & Documentation:</strong> Access on-screen help, guidelines, and documentation for website management.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 1</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 1">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Card 2 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 2</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 2">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Card 3 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 3</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 3">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navbar = document.querySelector('.navbar');
+        var homePageUrl = 'http://firotechbd.com/'; // URL of the landing home page
+
+        // Check if the current page is the home page
+        if (window.location.href === homePageUrl) {
+            // Add scroll event listener
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) { // Adjust scroll position as needed
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+    });
+</script>

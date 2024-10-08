@@ -1,0 +1,53 @@
+﻿@model Firotechbd.Areas.Admin.Models.EmployeePubProfile
+
+@{
+    Layout = null;
+}
+@Html.Partial("_EmpHeader")
+
+
+<div class="col-lg-12 mb-4 mb-sm-5">
+    <div class="card card-style1 border-0">
+        <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="@Url.Content("~/" + Firotechbd.Services.UploadFilePath.Common + "/" + Firotechbd.Services.UploadFilePath.EmployeeProfiles + "/" + Model.EmployeeProfileImageUrl)" alt="@Model.EmployeeName" style="max-width: 315px;">
+
+                </div>
+                <div class="col-lg-7 px-xl-10">
+                    <div class="d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                        <h3 class="h3 text-dark mb-0">@Model.EmployeeName</h3>
+                        <hr />
+                    </div>
+                    <ul class="list-unstyled mb-1-9">
+                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Position:</span> @Model.EmployeePosition</li>
+                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Status:</span> @Model.EmployeeStatus</li>
+                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> <a>@Model.EmployeeEmail</a></li>
+                        <li class="mb-2 mb-xl-3 display-28">
+                            <span class="display-26 text-secondary me-2 font-weight-600">Phone:</span>
+                            <a href="#" onclick="copyToClipboard('@Model.EmployeePhone')" class="text-decoration-none">@Model.EmployeePhone</a>
+                        </li>
+                        <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> @Model.EmployeeAddress</li>
+                    </ul>
+                    <div class="shareSocial">
+                        <ul class="socialList">
+                            <li><a href="@Model.Employeefb" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="@Model.Employeewp" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="@Model.Employeex" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li><a href="mailto:@Model.EmployeeEmail"><i class="fa-solid fa-envelope"></i></a></li>
+                            <li><a href="@Model.Employeewp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12 mb-4 mb-sm-5">
+    <span class="section-title text-primary mb-3 mb-sm-4">About Me</span>
+    <p>@Model.EmployeeAboutme</p>
+</div>
+
+
+@Html.Partial("_EmpFooter")

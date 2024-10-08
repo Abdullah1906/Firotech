@@ -1,0 +1,149 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Add custom styles for icons */
+    .feature-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .gallery-card {
+        margin-bottom: 20px;
+        background-color: #f8f9fa; /* Light background color */
+        border: 1px solid #dee2e6; /* Border color */
+        border-radius: 0.25rem; /* Rounded corners */
+        padding: 15px; /* Padding inside card */
+    }
+
+    .gallery-title {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+@Html.Partial("_HomeFixedMenu")
+<!-- Blog Details Page Container -->
+<div class="container mt-5">
+    <!-- Blog Header -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Inventory Management Software for Your Business</h1>
+        <p class="text-muted">Published by FiroTech</p>
+        <!-- Request for Demo Button -->
+        <a href="#contact" class="btn btn-primary mt-3">Request for Demo</a>
+    </div>
+
+    <!-- Key Features Section -->
+    <div class="row">
+        <!-- Key Features for Admin Management (Left Side) -->
+        <div class="col-md-6 key-box">
+            <h2 class="mb-4">Key Features for Admin Management</h2>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-boxes feature-icon text-primary"></i><strong>Comprehensive Inventory Management:</strong> Track and manage stock levels, locations, and product variants effortlessly.</li>
+                <li><i class="fas fa-chart-line feature-icon text-success"></i><strong>Inventory Reports:</strong> Access detailed inventory reports, including stock levels, movement, and valuation.</li>
+                <li><i class="fas fa-layer-group feature-icon text-info"></i><strong>Multi-Warehouse Support:</strong> Manage inventory across multiple warehouses and synchronize stock in real-time.</li>
+                <li><i class="fas fa-qrcode feature-icon text-warning"></i><strong>Barcode & QR Code Integration:</strong> Streamline stocktaking with barcode and QR code generation and scanning.</li>
+                <li><i class="fas fa-truck-loading feature-icon text-danger"></i><strong>Supplier & Purchase Order Management:</strong> Manage suppliers, create purchase orders, and track stock receipts.</li>
+                <li><i class="fas fa-shipping-fast feature-icon text-dark"></i><strong>Order Fulfillment:</strong> Streamline order picking, packing, and shipping with automated workflows.</li>
+                <li><i class="fas fa-sync feature-icon text-secondary"></i><strong>Real-Time Stock Sync:</strong> Ensure accurate stock levels with real-time synchronization across all channels.</li>
+                <li><i class="fas fa-user-shield feature-icon text-muted"></i><strong>User Role & Permissions:</strong> Control access with role-based permissions for employees and managers.</li>
+                <li><i class="fas fa-tags feature-icon text-primary"></i><strong>Pricing & Discounts:</strong> Set product pricing, apply bulk discounts, and manage special promotions.</li>
+                <li><i class="fas fa-database feature-icon text-success"></i><strong>Database Management:</strong> Perform regular backups and maintain data integrity.</li>
+                <li><i class="fas fa-bell feature-icon text-info"></i><strong>Automated Alerts:</strong> Receive alerts for low stock, expired items, and order status changes.</li>
+                <li><i class="fas fa-chart-pie feature-icon text-warning"></i><strong>Profit Margin Analysis:</strong> Analyze profit margins to identify best-performing products and categories.</li>
+                <li><i class="fas fa-warehouse feature-icon text-danger"></i><strong>Stock Transfer Management:</strong> Manage stock transfers between warehouses and locations seamlessly.</li>
+                <li><i class="fas fa-history feature-icon text-dark"></i><strong>Audit Trail & History:</strong> Keep a detailed history of stock movements and user actions for auditing purposes.</li>
+                <!-- Added Report Features -->
+                <li><i class="fas fa-chart-bar feature-icon text-secondary"></i><strong>Inventory Valuation Reports:</strong> Get insights into inventory value, including cost of goods sold (COGS) and stock valuation.</li>
+                <li><i class="fas fa-file-invoice feature-icon text-muted"></i><strong>Stock Movement Reports:</strong> Track incoming, outgoing, and transferred stock over specific periods.</li>
+                <li><i class="fas fa-box-open feature-icon text-primary"></i><strong>Dead Stock Reports:</strong> Identify slow-moving and obsolete inventory to optimize stock levels.</li>
+                <li><i class="fas fa-file-alt feature-icon text-success"></i><strong>Supplier Performance Reports:</strong> Evaluate supplier performance, including delivery times and order accuracy.</li>
+                <li><i class="fas fa-chart-area feature-icon text-info"></i><strong>Stock Level Forecasting:</strong> Analyze sales trends and forecast future stock requirements.</li>
+                <li><i class="fas fa-calendar-alt feature-icon text-warning"></i><strong>Periodic Reports:</strong> Generate weekly, monthly, and yearly reports for stock analysis and planning.</li>
+            </ul>
+        </div>
+
+        <!-- Key Features for Employees (Right Side) -->
+        <div class="col-md-6 key-box">
+            <h2 class="mb-4">Key Features for Employees</h2>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-barcode feature-icon text-primary"></i><strong>Barcode Scanning:</strong> Quickly scan products for stocktaking, order picking, and receiving.</li>
+                <li><i class="fas fa-clipboard-check feature-icon text-success"></i><strong>Stock Counting & Reconciliation:</strong> Perform stock counts and reconcile discrepancies easily.</li>
+                <li><i class="fas fa-shipping-fast feature-icon text-info"></i><strong>Order Processing:</strong> Process sales orders, pick lists, and packing slips efficiently.</li>
+                <li><i class="fas fa-retweet feature-icon text-warning"></i><strong>Returns & Adjustments:</strong> Handle stock returns and make inventory adjustments accurately.</li>
+                <li><i class="fas fa-box feature-icon text-danger"></i><strong>Stock Transfers:</strong> Manage inter-warehouse stock transfers and update inventory levels.</li>
+                <li><i class="fas fa-user-clock feature-icon text-dark"></i><strong>Task & Shift Management:</strong> Track tasks, shifts, and daily duties for efficient inventory handling.</li>
+                <li><i class="fas fa-tools feature-icon text-secondary"></i><strong>Product Maintenance:</strong> Update product details, stock levels, and location assignments directly.</li>
+                <li><i class="fas fa-clipboard-list feature-icon text-muted"></i><strong>Order Picking List:</strong> Access picking lists for order fulfillment to ensure accurate delivery.</li>
+                <li><i class="fas fa-clipboard feature-icon text-primary"></i><strong>Stock Issue & Receiving:</strong> Record stock issues and receipts with ease for inventory accuracy.</li>
+                <li><i class="fas fa-bell feature-icon text-success"></i><strong>Alerts & Notifications:</strong> Receive notifications for low stock, new orders, and tasks.</li>
+                <li><i class="fas fa-exchange-alt feature-icon text-info"></i><strong>Cycle Counting:</strong> Perform cycle counts to maintain accurate stock records regularly.</li>
+                <li><i class="fas fa-receipt feature-icon text-warning"></i><strong>Print Labels & Receipts:</strong> Print product labels and stock receipts directly from the system.</li>
+                <li><i class="fas fa-shield-alt feature-icon text-danger"></i><strong>Access Controls:</strong> Secure sensitive inventory data with role-based access controls.</li>
+                <li><i class="fas fa-search feature-icon text-dark"></i><strong>Quick Product Lookup:</strong> Search and locate products quickly using barcodes or product names.</li>
+                <li><i class="fas fa-question-circle feature-icon text-secondary"></i><strong>On-Screen Help & Guidance:</strong> Access on-screen help and guidelines for common inventory tasks.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 1</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 1">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Card 2 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 2</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 2">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Card 3 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 3</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 3">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navbar = document.querySelector('.navbar');
+        var homePageUrl = 'http://firotechbd.com/'; // URL of the landing home page
+
+        // Check if the current page is the home page
+        if (window.location.href === homePageUrl) {
+            // Add scroll event listener
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) { // Adjust scroll position as needed
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+    });
+</script>

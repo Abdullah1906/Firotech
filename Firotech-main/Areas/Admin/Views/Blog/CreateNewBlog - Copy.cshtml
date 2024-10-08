@@ -1,0 +1,95 @@
+﻿@model Firotechbd.Areas.Admin.ViewModels.BlogCreateVM
+
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Blog Create";
+}
+
+<link rel="stylesheet" href="~/plugins/dropzone/basic.css" />
+<link rel="stylesheet" href="~/plugins/dropzone/dropzone.css" />
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-outline card-info">
+                <div class="card-header">
+                    <h3 class="card-title">Create Blog</h3>
+                </div>
+                <!-- Blog form -->
+                <div class="card-body">
+                    <form id="blogForm" method="post" asp-action="akash" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="title">Blog Title</label>
+                            <input  type="text" class="form-control" id="title" name="Title" value="this is test" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="blogContent">Blog Content</label>
+                            <textarea id="blogContent" name="BlogContent" class="form-control" placeholder="Write your blog content here..."></textarea>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="thumbnail">Thumbnail Image</label>
+                            <input type="file" class="form-control-file" id="thumbnail" name="Thumbnail" accept="image/*" onchange="previewImage(event)" />
+                            <img id="thumbnailPreview" src="#" alt="Image Preview" style="display: none; margin-top: 10px; max-width: 100%;" />
+                        </div>
+
+                        <div class="form-group row">
+
+                            <div class="col-md-6">
+                                <label for="author" class="col-md-2 col-form-label">Author</label>
+                                <input type="text" class="form-control" id="author" name="Author" />
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <label for="publishedDate" class="col-md-12 col-form-label">Published Date</label>
+                                <input type="datetime-local" class="form-control" id="publishedDate" name="PublishedDate" />
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary" id="submitBlog">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <!-- Include TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/5kv5fb5fsylzy9mb51mvz33smlelv7wbcps2nomxt69ky176/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script>
+        // Initialize TinyMCE editor
+        tinymce.init({
+            selector: '#blogContent',
+            plugins: 'link image table lists',
+            toolbar: 'undo redo | formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | link image media | forecolor backcolor emoticons | ' +
+                'fontsizeselect fontselect | insertfile table template hr | preview code fullscreen',
+            menubar: 'file edit view insert format tools table help',
+        });
+    </script>
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            const imgPreview = document.getElementById('thumbnailPreview');
+
+            reader.onload = function () {
+                imgPreview.src = reader.result;
+                imgPreview.style.display = 'block'; // Show the image preview
+            };
+
+            if (event.target.files[0]) {
+                reader.readAsDataURL(event.target.files[0]); // Read the uploaded file
+            } else {
+                imgPreview.src = '#'; // Reset the image source if no file
+                imgPreview.style.display = 'none'; // Hide the image preview
+            }
+        }
+    </script>
+
+}

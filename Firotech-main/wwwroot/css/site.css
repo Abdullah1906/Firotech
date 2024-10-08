@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+/*.intro-box {
+    background-color: #f9f9f9;*/ /* Light background for the boxes */
+    /*border-radius: 8px;*/ /* Rounded corners */
+    /*padding: 20px;*/ /* Inner padding */
+    /*margin-bottom: 20px;*/ /* Space between boxes */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/ /* Subtle shadow for depth */
+    /*transition: transform 0.3s ease;*/ /* Animation for hover effect */
+/*}*/
+
+    .intro-box:hover {
+        transform: translateY(-5px);  
+    }
+
+
+   
+
+  
+
+      
+    
+

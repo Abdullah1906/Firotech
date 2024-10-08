@@ -1,0 +1,115 @@
+﻿@using Firotechbd.Services
+<!-- _AdminSidebar.cshtml -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="@Url.Action("Index", "Home")" class="brand-link">
+        <img src="~/images/firotech-logo.png" alt="@AppConstants.CompanyName" class="brand-image  elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">@AppConstants.CompanyName</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+         
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString() == "Dashboard" ? "menu-open" : "")">
+                    <a href="#" class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Dashboard" ? "active" : "")">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Dashboard")" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Overview</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Reports", "Dashboard")" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Reports" ? "active" : "")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Reports</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString() == "Blog" ? "menu-open" : "")">
+                    <a href="#" class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Blog" ? "active" : "")">
+                        <i class="nav-icon fas fa-blog"></i>
+                        <p>
+                            Blog
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="@Url.Action("BlogList", "Blog")" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "ListBlog" ? "active" : "")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("CreateNewBlog", "Blog", new { area = "Admin" })" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "CreateNewBlog" ? "active" : "")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>New Blog</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                
+                <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString() == "EmployeeProfiles" ? "menu-open" : "")">
+                    <a href="#" class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "EmployeeProfiles" ? "active" : "")">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Employee Profiles
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="@Url.Action("Active", "EmployeeProfiles", new { area = "Admin" })" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Active" ? "active" : "")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Active</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Inactive", "EmployeeProfiles", new { area = "Admin" })" class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Inactive" ? "active" : "")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Inactive</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Create", "EmployeeProfiles", new { area = "Admin" })"
+                               class="nav-link @(ViewContext.RouteData.Values["action"].ToString() == "Create" ? "active" : "")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create New</p>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a href="@Url.Action("Settings", "Admin")" class="nav-link">
+                        <i class="nav-icon fas fa-cogs"></i>
+                        <p>
+                            Settings
+                        </p>
+                    </a>
+                </li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

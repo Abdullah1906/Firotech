@@ -1,0 +1,84 @@
+﻿@page
+@using Firotechbd.Services
+@model LoginModel
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Log in";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FiroTech</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <link href="~/css/Loginstyle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row main-content bg-success text-center">
+            <div class="col-md-4 text-center company__info">
+
+
+                <span class="company__logo">
+
+                    <img src="~/images/firotech-logo.png" style="height:90px" />
+
+                </span>
+
+                
+
+            </div>
+            <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <h2>Welcome Back</h2>
+                        <hr>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                    </div>
+                    <div class="row">
+                        <form id="account" method="post">
+                            <div class="row">
+                                @*<input type="text" asp-for="UserName" class="form__input" placeholder="Username">*@
+
+                                <input asp-for="Input.Email" class="form__input" placeholder="Email" type="email" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="row">
+
+                                <input type="password" asp-for="Input.Password" class="form__input" placeholder="Password">
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <input type="submit" value="Submit" class="btn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <p>Forget Password? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="container-fluid text-center footer">
+       @Html.Raw(AppConstants.CopyrightName) <a href="@AppConstants.CompanyWebsite">@AppConstants.CompanyName</a>
+    </div>
+
+</body>
+<!-- partial -->
+
+</html>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

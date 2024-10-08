@@ -1,0 +1,76 @@
+﻿@using Firotechbd.Services
+@model IEnumerable<Firotechbd.Areas.Admin.Models.EmployeePubProfile>
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Profile";
+}
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card card-primary card-outline col-md-11">
+        <div class="card-header">
+            <h5 class="m-0">@EmployeeProfile.List</h5>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            SLUG
+                        </th>
+                        <th>
+                            Profile
+                        </th>
+                        <th>
+                            Employee Name
+                        </th>
+                        <th>
+                            Employee Position
+                        </th>
+                        <th>
+                            EmployeeStatus
+                        </th>
+                        <th>
+                            Is Active
+                        </th>
+
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Slug)
+                            </td>
+                            <td>
+                                <img src="@Url.Content("~/" + Firotechbd.Services.UploadFilePath.Common + "/" + Firotechbd.Services.UploadFilePath.EmployeeProfiles + "/" + item.EmployeeProfileImageUrl)" style="max-width: 60px;">
+                                
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmployeeName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmployeePosition)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmployeeStatus)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsActive)
+                            </td>
+
+                            <td>
+                                <button type="button" class="btn btn-sm btn-block btn-info" onclick="location.href='@Url.Action("Edit", "EmployeeProfiles", new { id = item.Id })'">Update</button>
+                                <a href="@Url.Content("~/" + item.Slug)" target="_blank" class="btn btn-sm btn-block btn-secondary">Details</a>
+
+
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

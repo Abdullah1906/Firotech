@@ -1,0 +1,148 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Add custom styles for icons */
+    .feature-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .gallery-card {
+        margin-bottom: 20px;
+        background-color: #f8f9fa; /* Light background color */
+        border: 1px solid #dee2e6; /* Border color */
+        border-radius: 0.25rem; /* Rounded corners */
+        padding: 15px; /* Padding inside card */
+    }
+
+    .gallery-title {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+@Html.Partial("_HomeFixedMenu")
+<!-- Blog Details Page Container -->
+<div class="container mt-5">
+    <!-- Blog Header -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">POS - Point of Sell for Your Business</h1>
+        <p class="text-muted">Published by FiroTech</p>
+        <!-- Request for Demo Button -->
+        <a href="#contact" class="btn btn-primary mt-3">Request for Demo</a>
+    </div>
+
+    <!-- Key Features Section -->
+    <div class="row">
+        <!-- Key Features for Admin Management (Left Side) -->
+        <div class="col-md-6 key-box">
+            <h2 class="mb-4">Key Features for Admin Management</h2>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-chart-line feature-icon text-primary"></i><strong>Real-Time Sales Monitoring:</strong> Track sales performance in real-time across all outlets.</li>
+                <li><i class="fas fa-chart-bar feature-icon text-success"></i><strong>Comprehensive Sales Reports:</strong> Access detailed sales reports for data-driven decision-making.</li>
+                <li><i class="fas fa-box-open feature-icon text-info"></i><strong>Inventory Management:</strong> Manage stock levels, receive low-stock alerts, and monitor product movement.</li>
+                <li><i class="fas fa-qrcode feature-icon text-warning"></i><strong>Barcode/QR Code Integration:</strong> Simplify product management with barcode and QR code scanning.</li>
+                <li><i class="fas fa-layer-group feature-icon text-danger"></i><strong>Multi-Store Support:</strong> Centrally manage multiple store locations and synchronize data.</li>
+                <li><i class="fas fa-wallet feature-icon text-dark"></i><strong>Cash Flow Management:</strong> Monitor cash transactions and till balances in real-time.</li>
+                <li><i class="fas fa-user-shield feature-icon text-primary"></i><strong>User Role & Permissions:</strong> Control access with customizable role-based permissions for employees.</li>
+                <li><i class="fas fa-truck feature-icon text-info"></i><strong>Supplier Management:</strong> Manage suppliers, purchase orders, and stock receiving efficiently.</li>
+                <li><i class="fas fa-bell feature-icon text-danger"></i><strong>Automatic Alerts:</strong> Receive notifications for low stock, daily sales summaries, and more.</li>
+                <li><i class="fas fa-file-invoice feature-icon text-dark"></i><strong>Tax Compliance:</strong> Automate tax calculations and ensure compliance with local regulations.</li>
+                <li><i class="fas fa-envelope feature-icon text-secondary"></i><strong>Email & SMS Notifications:</strong> Send promotional messages and updates to customers and staff.</li>
+                <!-- Added Report Features -->
+                <li><i class="fas fa-chart-pie feature-icon text-primary"></i><strong>Profit & Loss Reports:</strong> Analyze overall profitability with detailed profit and loss statements.</li>
+                <li><i class="fas fa-receipt feature-icon text-success"></i><strong>End of Day Reports:</strong> Get daily sales summaries, including cash, card, and other payment methods.</li>
+                <li><i class="fas fa-users feature-icon text-info"></i><strong>Customer Reports:</strong> Review customer purchase history, preferences, and loyalty program status.</li>
+                <li><i class="fas fa-boxes feature-icon text-warning"></i><strong>Stock Movement Reports:</strong> Track stock movements, including incoming and outgoing inventory, over time.</li>
+                <li><i class="fas fa-history feature-icon text-danger"></i><strong>Transaction History Reports:</strong> Access detailed transaction history for auditing and analysis.</li>
+                <li><i class="fas fa-file-alt feature-icon text-dark"></i><strong>Salesperson Performance Reports:</strong> Monitor employee performance and sales contribution.</li>
+                <li><i class="fas fa-chart-area feature-icon text-secondary"></i><strong>Sales Trend Analysis:</strong> Identify sales trends and make informed decisions based on historical data.</li>
+                <li><i class="fas fa-chart-line feature-icon text-muted"></i><strong>Product Performance Reports:</strong> Evaluate top-selling and low-performing products.</li>
+                <li><i class="fas fa-calendar-alt feature-icon text-primary"></i><strong>Periodic Reports:</strong> Generate weekly, monthly, and yearly reports for financial planning.</li>
+            </ul>
+        </div>
+
+        <!-- Key Features for Employees (Right Side) -->
+        <div class="col-md-6 key-box">
+            <h2 class="mb-4">Key Features for Employees</h2>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-cash-register feature-icon text-primary"></i><strong>Easy-to-Use POS Interface:</strong> User-friendly interface for quick and efficient sales processing.</li>
+                <li><i class="fas fa-credit-card feature-icon text-success"></i><strong>Flexible Payment Options:</strong> Accept cash, card, mobile payments, and more for customer convenience.</li>
+                <li><i class="fas fa-search-dollar feature-icon text-info"></i><strong>Product Search & Lookup:</strong> Quickly search for products using barcode scanning or search functionality.</li>
+                <li><i class="fas fa-sync feature-icon text-warning"></i><strong>Real-Time Inventory Sync:</strong> Access up-to-date inventory levels across all locations.</li>
+                <li><i class="fas fa-retweet feature-icon text-dark"></i><strong>Returns & Exchanges:</strong> Process product returns and exchanges smoothly to enhance customer satisfaction.</li>
+                <li><i class="fas fa-gift feature-icon text-secondary"></i><strong>Gift Cards & Loyalty Programs:</strong> Issue gift cards and manage loyalty points for customers directly from the POS.</li>
+                <li><i class="fas fa-comment-dollar feature-icon text-muted"></i><strong>Upselling & Cross-Selling Tools:</strong> Suggest related products and special offers during checkout.</li>
+                <li><i class="fas fa-check-circle feature-icon text-primary"></i><strong>Order Accuracy Checks:</strong> Review and confirm orders before finalizing the sale.</li>
+                <li><i class="fas fa-receipt feature-icon text-success"></i><strong>Print or Email Receipts:</strong> Provide customers with printed or digital receipts instantly.</li>
+                <li><i class="fas fa-clipboard-list feature-icon text-info"></i><strong>Daily Task Management:</strong> Manage daily tasks and store duties directly from the POS.</li>
+                <li><i class="fas fa-users feature-icon text-warning"></i><strong>Customer Profiles:</strong> Access customer purchase history and preferences to provide personalized service.</li>
+                <li><i class="fas fa-headset feature-icon text-danger"></i><strong>Support & Assistance:</strong> Access support resources and training materials directly from the POS system.</li>
+                <li><i class="fas fa-money-check-alt feature-icon text-dark"></i><strong>Cash Drawer Management:</strong> Handle cash transactions, manage till balances, and perform cash drops safely.</li>
+                <li><i class="fas fa-question-circle feature-icon text-secondary"></i><strong>On-Screen Help:</strong> Instant on-screen help and tips for navigating the POS system effectively.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 1</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 1">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Card 2 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 2</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 2">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Card 3 -->
+            <div class="col-12">
+                <div class="card gallery-card">
+                    <div class="card-body">
+                        <h5 class="gallery-title">Title 3</h5>
+                    </div>
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top img-fluid" alt="Image 3">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navbar = document.querySelector('.navbar');
+        var homePageUrl = 'http://firotechbd.com/'; // URL of the landing home page
+
+        // Check if the current page is the home page
+        if (window.location.href === homePageUrl) {
+            // Add scroll event listener
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) { // Adjust scroll position as needed
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+    });
+</script>
